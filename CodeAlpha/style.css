@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0e0e0e;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 40px;
+  }
+  
+  .player-container {
+    display: flex;
+    max-width: 900px;
+    width: 100%;
+    background: #1e1e1e;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  }
+  
+  .sidebar {
+    width: 30%;
+    background: #111;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .sidebar h2 {
+    margin-bottom: 15px;
+    color: #1db954;
+  }
+  
+  #playlist {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #playlist li {
+    padding: 12px;
+    margin-bottom: 8px;
+    background: #2c2c2c;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #playlist li:hover, #playlist li.active {
+    background-color: #1db954;
+    color: white;
+  }
+  
+  .main-player {
+    width: 70%;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  #current-track-name {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #1db954;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+  }
+  
+  .controls button {
+    background: #1db954;
+    border: none;
+    padding: 14px 18px;
+    font-size: 22px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .controls button:hover {
+    background: #17a74a;
+  }
+  .progress-container {
+    height: 10px;
+    background: #333;
+    border-radius: 50px;
+    overflow: hidden;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    position: relative;
+  }
+  
+  #progress {
+    height: 100%;
+    width: 0%;
+    border-radius: inherit;
+    background: linear-gradient(
+      270deg,
+      #1db954,
+      #ff4081,
+      #6200ea,
+      #03dac6,
+      #ff9800
+    );
+    background-size: 400% 400%;
+    animation: vibeFlow 8s linear infinite;
+    transition: width 0.25s ease-in-out;
+    box-shadow: 0 0 10px #1db954, 0 0 20px #ff4081;
+  }
+  
+  
+  @keyframes vibeFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  audio {
+    display: none;
+  }
+  
